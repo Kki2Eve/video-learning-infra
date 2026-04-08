@@ -1,0 +1,26 @@
+﻿camera_frame: camera_color_optical_frame
+robot_base_frame: robot_base
+camera_intrinsics:
+  width: 640
+  height: 480
+  fx: 607.56
+  fy: 607.88
+  cx: 321.32
+  cy: 258.10
+  distortion_model: unknown
+  coeffs: []
+camera_to_robot_base:
+  - [-0.65623445, -0.42619398,  0.62266768, -0.74319511]
+  - [-0.75371209,  0.33120177, -0.56764732, 0.54563144]
+  - [0.03569923, -0.84182188, -0.53857356, 0.44301888]
+  - [0.0, 0.0, 0.0, 1.00]
+sim_camera:
+  description: Fixed SAPIEN scene camera pose using T_world_cam.
+  pose_world:
+    position_xyz: [1.6, -1.2, 1.1]
+    target_xyz: [0.0, 0.0, 0.4]
+    up_xyz: [0.0, 0.0, 1.0]
+metadata:
+  description: Example extrinsic calibration from camera frame to robot base frame.
+  updated_by: arm_control skeleton
+

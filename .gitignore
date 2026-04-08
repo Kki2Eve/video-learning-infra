@@ -1,0 +1,78 @@
+﻿# Git metadata backups kept during repo consolidation
+.git_backups/
+**/.git.disabled_*
+
+# Nested repositories that should not be tracked if they reappear
+**/.git
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.python-version
+.venv/
+venv/
+env/
+ENV/
+
+# Python tooling / test / build
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+site/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+
+# Notebooks / logs / temp
+.ipynb_checkpoints/
+*.log
+*.tmp
+*.temp
+
+# Environment files
+.env
+.env.*
+
+# Frontend
+arm_control/web/node_modules/
+arm_control/web/dist/
+arm_control/web/.vite/
+assets/robots/arms/RM65-B-V/export.log
+
+# Local calibration / capture outputs
+arm_control/hand_eye_calibration/picture/
+arm_control/hand_eye_calibration/eye_hand_data/
+arm_control/hand_eye_calibration/__pycache__/
+arm_control/hand_eye_calibration/RobotToolPose.csv
+arm_control/hand_eye_calibration/libs/web-log
+arm_control/hand_eye_calibration/libs/__pycache__/
+third_party/robotic_arm_package/__pycache__/
+
+# Common large local sensor artifacts
+*.bag
+*.ply
+*.pcd
+
+# Shared SDK binaries that should remain versioned
+!third_party/robotic_arm_package/libs/**/*.so
+!third_party/robotic_arm_package/libs/**/*.so.*
+

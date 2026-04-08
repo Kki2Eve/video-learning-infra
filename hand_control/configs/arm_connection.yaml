@@ -1,0 +1,11 @@
+realman:
+  left:
+    side: left
+    ip: 192.168.1.18
+  right:
+    side: right
+    ip: 192.168.1.19
+
+metadata:
+  description: Hand-local arm connection config currently used by hand_control.
+  updated_by: repo restructure

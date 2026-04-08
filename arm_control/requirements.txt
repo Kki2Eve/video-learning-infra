@@ -1,0 +1,6 @@
+numpy>=1.24
+PyYAML>=6.0
+pytest>=7.4
+sapien==3.0.0b0
+fastapi>=0.111
+uvicorn>=0.30

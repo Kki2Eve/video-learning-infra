@@ -1,0 +1,11 @@
+workspace:
+  frame: robot_base
+  min_position: [-0.60, -0.60, 0.00]
+  max_position: [0.60, 0.60, 1.20]
+  max_linear_velocity_mps: 1.0
+  max_angular_velocity_rps: 2.5
+safety:
+  z_min_m: 0.0
+  clamp_to_workspace: true
+  stop_on_ik_failure: true
+  collision_padding_m: 0.03

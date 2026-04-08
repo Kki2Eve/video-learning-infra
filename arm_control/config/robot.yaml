@@ -1,0 +1,64 @@
+robot:
+  name: rm65
+  urdf_path: assets/robots/arms/RM65-B-V/urdf/RM65-B-V.urdf
+  base_link: base_link
+  ee_link: link_6
+  controlled_joints:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+  joint_limits:
+    joint_1: [-3.106, 3.106]
+    joint_2: [-2.2689, 2.2689]
+    joint_3: [-2.356, 2.356]
+    joint_4: [-3.106, 3.106]
+    joint_5: [-2.234, 2.234]
+    joint_6: [-6.28, 6.28]
+mapping:
+  position_scale: 1.0
+  tool_offset_xyz: [0.0, 0.0, 0.0]
+  hand_to_tool_euler_rpy: [0.0, 0.0, 0.0]
+  target_frame: robot_base
+filter:
+  type: exponential_smoothing
+  alpha: 0.25
+ik:
+  backend: realman
+  arm_model: RM_65
+  joints_in_degrees: true
+  algo_config:
+    install_angle: [0.0, 0.0, 0.0]
+    workframe: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    toolframe:
+      pose: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      payload: 0.0
+      center_of_mass: [0.0, 0.0, 0.0]
+  default_timeout_s: 0.02
+sim:
+  fix_root_link: true
+  disable_gravity: true
+  timestep_s: 0.0041666667
+  initial_qpos: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  camera:
+    width: 1280
+    height: 720
+    fovy_rad: 1.0
+    near: 0.05
+    far: 20.0
+realman:
+  ip: "192.168.1.18"
+  port: 8080
+  work_frame: "World"
+  self_collision_enable: true
+  default_speed: 100
+  default_block: 1
+  default_blend_radius: 0
+  default_connect: 0
+  default_joint_move_t: 0
+  current_pose_frame_id: "robot_base"
+  sdk_log_level: 3
+  home_joints_deg: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  top_view_joints_deg: []
